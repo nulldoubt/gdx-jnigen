@@ -183,7 +183,7 @@ public class RobustJavaMethodParser implements JavaMethodParser {
 		for (TypeDeclaration<?> type : unit.getTypes()) {
 			if (type instanceof ClassOrInterfaceDeclaration || type instanceof EnumDeclaration) return type;
 		}
-		throw new RuntimeException("Couldn't find class, is your java file empty?");
+		throw new RuntimeException("Couldn't find class, is your java file empty? Unit: " + unit);
 	}
 
 	private ArrayList<JniSection> getJniSections (String classFile) {
